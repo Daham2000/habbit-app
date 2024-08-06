@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:habbit_tracker/views/startup_page/startup_views.dart';
 
 void main() {
   runApp(const MyApp());
@@ -11,11 +12,12 @@ class MyApp extends StatelessWidget {
   Widget build(BuildContext context) {
     return MaterialApp(
       title: 'Habit Tracker',
+      debugShowCheckedModeBanner: false,
       theme: ThemeData(
         colorScheme: ColorScheme.fromSeed(seedColor: Colors.deepPurple),
         useMaterial3: true,
       ),
-      home:,
+      home: StartUpView(),
     );
   }
 }
