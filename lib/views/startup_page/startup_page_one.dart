@@ -9,7 +9,7 @@ class StartupPageOne extends StatefulWidget {
 }
 
 class _StartupPageOneState extends State<StartupPageOne> {
-  final PageController _pageController = PageController(viewportFraction: 0.8);
+  final PageController _pageController = PageController(viewportFraction: 1);
 
   int _currentPage = 0;
   final List<String> images = [
@@ -17,11 +17,22 @@ class _StartupPageOneState extends State<StartupPageOne> {
     'assets/images/startup_page_two.png',
     'assets/images/startup_page_three.png',
   ];
+  final List<String> titles = [
+    'Create Good\nHabits',
+    'Track Your\nProgress',
+    'Stay Together\nand Strong',
+  ];
+  final List<String> descriptions = [
+    'Change your life by slowly adding new healty habits and sticking to them.',
+    'Everyday you become one step closer to your goal. Don’t give up!',
+    'Find friends to discuss common topics. Complete challenges together.',
+  ];
+
   @override
   Widget build(BuildContext context) {
     double screenWidth = MediaQuery.of(context).size.height;
     double imageSizeHeight = screenWidth * 0.45; // 10% of screen width
-    double sliderHeight = screenWidth * 0.70; // 10% of screen width
+    double sliderHeight = screenWidth * 0.69; // 10% of screen width
     return Container(
       child: Column(
         children: [
@@ -36,48 +47,81 @@ class _StartupPageOneState extends State<StartupPageOne> {
                 });
               },
               itemBuilder: (_, index) {
-                return Column(
-                  children: [
-                    Padding(
-                      padding: EdgeInsets.only(left: 10.0),
-                      child: Image.asset(
-                        images[index],
-                        height: imageSizeHeight,
-                      ),
-                    ),
-                    Row(
-                      children: [
-                        Text(
-                          "Create\nGood Habits",
-                          style: GoogleFonts.roboto(
-                              textStyle: TextStyle(
-                                color: Colors.white,
-                                decoration: TextDecoration.none,
-                                fontSize: 40.0,
-                              )),
-                        ),
-                      ],
-                    ),
-                    Padding(
-                      padding: const EdgeInsets.only(top: 10),
-                      child: Text(
-                        "Change your life by slowly adding new healty habits and sticking to them.",
-                        style: TextStyle(
-                          color: Colors.white,
-                          fontWeight: FontWeight.w100,
-                // light
-                          fontStyle: FontStyle.normal,
-                          decoration: TextDecoration.none,
-                          fontSize: 14.0,
+                return Padding(
+                  padding: const EdgeInsets.only(left: 20, right: 20, top: 15),
+                  child: Column(
+                    children: [
+                      Padding(
+                        padding: EdgeInsets.only(left: 10.0),
+                        child: Image.asset(
+                          images[index],
+                          height: imageSizeHeight,
                         ),
                       ),
-                    ),
-                  ],
+                      Row(
+                        children: [
+                          Text(
+                            titles[index],
+                            style: GoogleFonts.roboto(
+                                textStyle: TextStyle(
+                              color: Colors.white,
+                              decoration: TextDecoration.none,
+                              fontSize: 40.0,
+                            )),
+                          ),
+                        ],
+                      ),
+                      Padding(
+                        padding: const EdgeInsets.only(top: 10),
+                        child: Text(
+                          descriptions[index],
+                          style: TextStyle(
+                            color: Colors.white,
+                            fontWeight: FontWeight.w100,
+                            // light
+                            fontStyle: FontStyle.normal,
+                            decoration: TextDecoration.none,
+                            fontSize: 14.0,
+                          ),
+                        ),
+                      ),
+                    ],
+                  ),
                 );
               },
             ),
           ),
-
+          Center(
+            child: Padding(
+              padding: const EdgeInsets.only(left: 10, bottom: 20),
+              child: Row(
+                mainAxisAlignment: MainAxisAlignment.center,
+                children: [
+                  Padding(
+                    padding: const EdgeInsets.all(5.0),
+                    child: Image.asset(
+                      (_currentPage == 0) ? "assets/images/active_icon.png" : "assets/images/deactive_icon.png",
+                      height: 10,
+                    ),
+                  ),
+                  Padding(
+                    padding: const EdgeInsets.all(5.0),
+                    child: Image.asset(
+                      (_currentPage == 1) ? "assets/images/active_icon.png" : "assets/images/deactive_icon.png",
+                      height: 10,
+                    ),
+                  ),
+                  Padding(
+                    padding: const EdgeInsets.all(5.0),
+                    child: Image.asset(
+                      (_currentPage == 2) ? "assets/images/active_icon.png" : "assets/images/deactive_icon.png",
+                      height: 10,
+                    ),
+                  ),
+                ],
+              ),
+            ),
+          )
         ],
       ),
     );

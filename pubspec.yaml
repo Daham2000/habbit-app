@@ -67,6 +67,8 @@ flutter:
     - assets/images/startup_img.png
     - assets/images/startup_page_two.png
     - assets/images/startup_page_three.png
+    - assets/images/active_icon.png
+    - assets/images/deactive_icon.png
 
   # An image asset can refer to one or more resolution-specific "variants", see
   # https://flutter.dev/assets-and-images/#resolution-aware
