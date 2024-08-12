@@ -1,8 +1,7 @@
 import 'package:flutter/material.dart';
-import 'package:google_fonts/google_fonts.dart';
-import 'package:habbit_tracker/views/startup_page/BottomSocialView.dart';
+import 'package:habbit_tracker/views/startup_page/widgets/BottomSocialView.dart';
 
-import 'startup_page_one.dart';
+import 'widgets/startup_page_one.dart';
 
 class StartUpView extends StatefulWidget {
   const StartUpView({super.key});
@@ -26,7 +25,7 @@ class _StartUpViewState extends State<StartUpView> {
             ],
           ),
         ),
-        child: Center(
+        child: const Center(
           child: Column(
             children: [
               Column(

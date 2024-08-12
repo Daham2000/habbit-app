@@ -21,8 +21,7 @@ class _BottomSocialViewState extends State<BottomSocialView> {
             padding: const EdgeInsets.symmetric(horizontal: 20),
             child: ElevatedButton(
                 onPressed: () => {},
-                child: Container(
-                    child: Row(
+                child: const Row(
                   mainAxisAlignment: MainAxisAlignment.center,
                   children: [
                     Icon(Icons.arrow_right_alt_sharp),
@@ -31,7 +30,7 @@ class _BottomSocialViewState extends State<BottomSocialView> {
                       style: TextStyle(color: Colors.black),
                     )
                   ],
-                ))),
+                )),
           ),
           Padding(
             padding: const EdgeInsets.only(top: 10),
@@ -42,7 +41,7 @@ class _BottomSocialViewState extends State<BottomSocialView> {
                   padding: const EdgeInsets.symmetric(horizontal: 8),
                   child: ElevatedButton(
                     onPressed: () => {},
-                    child: Row(
+                    child: const Row(
                       mainAxisAlignment: MainAxisAlignment.center,
                       children: [
                         Icon(Icons.apple),
@@ -57,7 +56,8 @@ class _BottomSocialViewState extends State<BottomSocialView> {
                     ),
                     style: ElevatedButton.styleFrom(
                       padding: EdgeInsets.symmetric(
-                          horizontal: horizontalPadding, vertical: 8.0), // Custom padding
+                          horizontal: horizontalPadding,
+                          vertical: 8.0), // Custom padding
                     ),
                   ),
                 ),
@@ -80,7 +80,8 @@ class _BottomSocialViewState extends State<BottomSocialView> {
                     ),
                     style: ElevatedButton.styleFrom(
                       padding: EdgeInsets.symmetric(
-                          horizontal: horizontalPadding, vertical: 8.0), // Custom padding
+                          horizontal: horizontalPadding,
+                          vertical: 8.0), // Custom padding
                     ),
                   ),
                 ),
@@ -103,7 +104,8 @@ class _BottomSocialViewState extends State<BottomSocialView> {
                     ),
                     style: ElevatedButton.styleFrom(
                       padding: EdgeInsets.symmetric(
-                          horizontal: horizontalPadding, vertical: 8.0), // Custom padding
+                          horizontal: horizontalPadding,
+                          vertical: 8.0), // Custom padding
                     ),
                   ),
                 ),
