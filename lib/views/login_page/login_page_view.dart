@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:habbit_tracker/views/sign_up_page/sign_up_page_view.dart';
 
 class LoginPageView extends StatefulWidget {
   const LoginPageView({super.key});
@@ -105,7 +106,13 @@ class _LoginPageViewState extends State<LoginPageView> {
                         style: ButtonStyle(
                           foregroundColor: MaterialStateProperty.all<Color>(Color(0xFF3843FF)),
                         ),
-                        onPressed: () { },
+                        onPressed: () {
+                          Navigator.push(
+                            context,
+                            MaterialPageRoute(
+                                builder: (context) => const SignUpPageView()
+                          ));
+                        },
                         child: Text('Don’t have account? Let’s create!', style: TextStyle(
                           fontSize: 10.0
                         ),),
