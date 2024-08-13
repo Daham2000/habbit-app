@@ -1,6 +1,8 @@
 import 'package:flutter/material.dart';
 import 'package:google_fonts/google_fonts.dart';
 
+import '../../login_page/login_page_view.dart';
+
 class BottomSocialView extends StatefulWidget {
   const BottomSocialView({super.key});
 
@@ -20,7 +22,13 @@ class _BottomSocialViewState extends State<BottomSocialView> {
           Padding(
             padding: const EdgeInsets.symmetric(horizontal: 20),
             child: ElevatedButton(
-                onPressed: () => {},
+                onPressed: () => {
+                      Navigator.push(
+                        context,
+                        MaterialPageRoute(
+                            builder: (context) => const LoginPageView()),
+                      )
+                    },
                 child: const Row(
                   mainAxisAlignment: MainAxisAlignment.center,
                   children: [
@@ -41,7 +49,7 @@ class _BottomSocialViewState extends State<BottomSocialView> {
                   padding: const EdgeInsets.symmetric(horizontal: 8),
                   child: ElevatedButton(
                     onPressed: () => {},
-                    child: const Row(
+                    child: Row(
                       mainAxisAlignment: MainAxisAlignment.center,
                       children: [
                         Icon(Icons.apple),
