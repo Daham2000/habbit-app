@@ -69,6 +69,16 @@ flutter:
     - assets/images/startup_page_three.png
     - assets/images/active_icon.png
     - assets/images/deactive_icon.png
+    - assets/images/female_gender_icon.png
+    - assets/images/male_gender_icon.png
+    - assets/images/sleep_icon.png
+    - assets/images/plant_icon.png
+    - assets/images/journal_icon.png
+    - assets/images/study_icon.png
+    - assets/images/medic_icon.png
+    - assets/images/read_icon.png
+    - assets/images/run_icon.png
+    - assets/images/water_icon.png
 
   # An image asset can refer to one or more resolution-specific "variants", see
   # https://flutter.dev/assets-and-images/#resolution-aware
